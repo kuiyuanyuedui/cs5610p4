@@ -45,55 +45,57 @@ export default function Dashboard(props) {
   return (
     <div>
       <Header></Header>
-      <div class="container">
-        <div class="mt-4 mb-4 d-flex justify-content-between">
-          <div class="h1 fw-bold">
-            Welcome to <span style={{ color: "#c4041d" }}>N</span>U Community!
+      <div class="vh-100">
+        <div class="container">
+          <div class="mt-4 mb-4 d-flex justify-content-between">
+            <div class="h1 fw-bold">
+              Welcome to <span style={{ color: "#c4041d" }}>N</span>U Community!
+            </div>
+            <div>
+              <button
+                class="btn btn-primary me-md-2 justify-content-md-end"
+                id="newpost"
+                type="button"
+                style={{ backgroundColor: "#c4041d", borderColor: "#c4041d" }}
+                onClick={handleClickShare}
+              >
+                Share my experience
+              </button>
+            </div>
           </div>
-          <div>
+          <div id="content"></div>
+          <div id="list" class="list-group">
+            {list.map((i, index) => (
+              <Postentry
+                id={i._id}
+                author={i.author}
+                title={i.title}
+                content={i.content}
+              />
+            ))}
+          </div>
+          <div class="d-flex justify-content-between mt-5">
             <button
-              class="btn btn-primary me-md-2 justify-content-md-end"
-              id="newpost"
               type="button"
-              style={{ backgroundColor: "#c4041d", borderColor: "#c4041d" }}
-              onClick={handleClickShare}
+              class="btn btn-outline-secondary"
+              disabled={disablePrevious}
+              onClick={() => {
+                window.location.href = "?p=" + (page - 1);
+              }}
             >
-              Share my experience
+              Previous
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              disabled={disableNext}
+              onClick={() => {
+                window.location.href = "?p=" + (page + 1);
+              }}
+            >
+              Next
             </button>
           </div>
-        </div>
-        <div id="content"></div>
-        <div id="list" class="list-group">
-          {list.map((i, index) => (
-            <Postentry
-              id={i._id}
-              author={i.author}
-              title={i.title}
-              content={i.content}
-            />
-          ))}
-        </div>
-        <div class="d-flex justify-content-between mt-5">
-          <button
-            type="button"
-            class="btn btn-outline-secondary"
-            disabled={disablePrevious}
-            onClick={() => {
-              window.location.href = "?p=" + (page - 1);
-            }}
-          >
-            Previous
-          </button>
-          <button
-            type="button"
-            class="btn btn-outline-secondary"
-            disabled={disableNext}
-            onClick={() => {
-              window.location.href = "?p=" + (page + 1);
-            }}
-          >
-            Next
-          </button>
         </div>
       </div>
     </div>

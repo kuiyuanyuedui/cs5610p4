@@ -54,58 +54,70 @@ export default function Post() {
   }
 
   return (
-    <div class="container-md">
-      <Header></Header>
-      {message !== "" && (
-        <div
-          class="alert alert-warning alert-dismissible fade show"
-          role="alert"
-          id="msg"
-        >
-          <span id="msgContent">{message}</span>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="alert"
-            aria-label="Close"
-          ></button>
-        </div>
-      )}
-      <div>
-        <h1 id="title" class="text-center mb-4">
-          {post.title}
-        </h1>
-        <h5 id="content" class="mb-4">
-          {post.content}
-        </h5>
-        <div class="d-flex justify-content-center">
-          {post.author === user ? (
-            <div>
-              <button
-                id="edit"
-                type="button"
-                class="btn btn-primary mx-5"
-                onClick={handleEdit}
-              >
-                Edit
-              </button>
-              <button
-                id="delete"
-                type="button"
-                class="btn btn-danger mx-5"
-                onClick={handleDelete}
-              >
-                Delete
-              </button>
-            </div>
-          ) : (
-            <details>
-              <summary>Contact Author</summary>
-              {"Author:" + post.author}
-              <br />
-              {"Email:" + post.writerEmail}
-            </details>
-          )}
+    <div class="vh-100">
+      <div class="container-md">
+        <Header></Header>
+        {message !== "" && (
+          <div
+            class="alert alert-warning alert-dismissible fade show"
+            role="alert"
+            id="msg"
+          >
+            <span id="msgContent">{message}</span>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="alert"
+              aria-label="Close"
+            ></button>
+          </div>
+        )}
+        <div>
+          <div
+            style={{
+              backgroundColor: "white",
+              padding: 30 + "px",
+              borderRadius: 15 + "px",
+              marginBottom: 30 + "px",
+            }}
+          >
+            <h4 id="title" class="mb-4 fw-bold">
+              {post.title}
+            </h4>
+            <hr />
+            <p id="content" class="mb-4">
+              {post.content}
+            </p>
+          </div>
+          <div class="d-flex justify-content-center">
+            {post.author === user ? (
+              <div>
+                <button
+                  id="edit"
+                  type="button"
+                  class="btn btn-danger mx-5"
+                  onClick={handleEdit}
+                >
+                  Edit
+                </button>
+                <button
+                  id="delete"
+                  type="button"
+                  class="btn btn-danger mx-5"
+                  onClick={handleDelete}
+                >
+                  Delete
+                </button>
+              </div>
+            ) : (
+              <details>
+                <summary>Contact Author</summary>
+                {"Author:" + post.author}
+                <br />
+                {"Email:" + post.writerEmail}
+              </details>
+            )}
+          </div>
         </div>
       </div>
     </div>
