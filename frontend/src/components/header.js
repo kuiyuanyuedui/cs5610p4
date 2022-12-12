@@ -21,7 +21,12 @@ export default function Header(props) {
     <div class="container">
       <ul class="nav justify-content-end">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/">
+          <a
+            class="nav-link"
+            aria-current="page"
+            style={{ color: "#c4041d" }}
+            href="/"
+          >
             Home
           </a>
         </li>
@@ -31,12 +36,19 @@ export default function Header(props) {
             id="navUsername"
             aria-current="page"
             href="/profile"
+            style={{ color: "#c4041d" }}
           >
             Welcome {user}!
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="linkLogout" href="#" onClick={handleLogout}>
+          <a
+            class="nav-link"
+            id="linkLogout"
+            href="#"
+            onClick={handleLogout}
+            style={{ color: "#c4041d" }}
+          >
             Log Out
           </a>
         </li>

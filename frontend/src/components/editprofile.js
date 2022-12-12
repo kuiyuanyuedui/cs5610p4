@@ -117,7 +117,11 @@ export default function EditProfile() {
           ></input>
         </div>
         <div class="d-grid gap-2 mt-5">
-          <button type="submit" class="btn btn-primary">
+          <button
+            type="submit"
+            class="btn btn-primary"
+            style={{ backgroundColor: "#c4041d", borderColor: "#c4041d" }}
+          >
             Save
           </button>
         </div>

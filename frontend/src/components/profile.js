@@ -69,6 +69,7 @@ export default function Profile() {
             type="button"
             class="btn btn-primary mx-5"
             onClick={handleEdit}
+            style={{ backgroundColor: "#c4041d", borderColor: "#c4041d" }}
           >
             Edit
           </button>

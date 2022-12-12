@@ -41,7 +41,10 @@ export default function EditPost() {
     const json = await res.json();
     setMessage(json.msg);
     if (res.status === 200) {
-      setTimeout(() => (window.location.href = "/post?id=" + p.get("id")), 2000);
+      setTimeout(
+        () => (window.location.href = "/post?id=" + p.get("id")),
+        2000
+      );
     }
   }
 
@@ -65,25 +68,25 @@ export default function EditPost() {
       )}
       <div class="h1">Edit Experience</div>
       <form method="post" onSubmit={onSubmit}>
-      <div class="mb-3">
-        <label class="form-label">Title</label>
-        <input
-          name="title"
-          class="form-control"
-          disabled="disabled"
-          value={values.title}
-        />
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Content</label>
-        <textarea
-          name="content"
-          class="form-control"
-          rows="20"
-          value={values.content}
-          onChange={handleChange}
-        ></textarea>
-      </div>
+        <div class="mb-3">
+          <label class="form-label">Title</label>
+          <input
+            name="title"
+            class="form-control"
+            disabled="disabled"
+            value={values.title}
+          />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Content</label>
+          <textarea
+            name="content"
+            class="form-control"
+            rows="20"
+            value={values.content}
+            onChange={handleChange}
+          ></textarea>
+        </div>
         <div class="d-grid gap-2 mt-5">
           <button type="submit" class="btn btn-primary">
             Save

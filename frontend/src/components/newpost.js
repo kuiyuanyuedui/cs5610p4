@@ -82,7 +82,12 @@ export default function Newpost() {
             ></textarea>
           </div>
           <div class="d-grid gap-2 mt-5">
-            <button id="save" class="btn btn-primary" type="submit">
+            <button
+              id="save"
+              class="btn btn-primary"
+              type="submit"
+              style={{ backgroundColor: "#c4041d", borderColor: "#c4041d" }}
+            >
               Save
             </button>
           </div>

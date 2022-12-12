@@ -83,6 +83,7 @@ function MyDB() {
         title: entry.title,
         content: entry.content,
         writerEmail: entry.writerEmail,
+        updateTime: new Date(Date.now()),
       });
       return res;
     } finally {
@@ -97,6 +98,7 @@ function MyDB() {
       const posts = client.db("AlignCareer").collection("posts");
       const res = await posts
         .find()
+        .sort({ updateTime: -1 })
         .skip((page - 1) * 10)
         .limit(10)
         .toArray();
