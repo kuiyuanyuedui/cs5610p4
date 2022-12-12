@@ -49,50 +49,52 @@ export default function EditPost() {
   }
 
   return (
-    <div class="container-md">
-      <Header></Header>
-      {message !== "" && (
-        <div
-          class="alert alert-warning alert-dismissible fade show"
-          role="alert"
-          id="msg"
-        >
-          <span id="msgContent">{message}</span>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="alert"
-            aria-label="Close"
-          ></button>
-        </div>
-      )}
-      <div class="h1">Edit Experience</div>
-      <form method="post" onSubmit={onSubmit}>
-        <div class="mb-3">
-          <label class="form-label">Title</label>
-          <input
-            name="title"
-            class="form-control"
-            disabled="disabled"
-            value={values.title}
-          />
-        </div>
-        <div class="mb-3">
-          <label class="form-label">Content</label>
-          <textarea
-            name="content"
-            class="form-control"
-            rows="20"
-            value={values.content}
-            onChange={handleChange}
-          ></textarea>
-        </div>
-        <div class="d-grid gap-2 mt-5">
-          <button type="submit" class="btn btn-primary">
-            Save
-          </button>
-        </div>
-      </form>
+    <div class="vh-100">
+      <div class="container-md">
+        <Header></Header>
+        {message !== "" && (
+          <div
+            class="alert alert-warning alert-dismissible fade show"
+            role="alert"
+            id="msg"
+          >
+            <span id="msgContent">{message}</span>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="alert"
+              aria-label="Close"
+            ></button>
+          </div>
+        )}
+        <div class="h1">Edit Experience</div>
+        <form method="post" onSubmit={onSubmit}>
+          <div class="mb-3">
+            <label class="form-label">Title</label>
+            <input
+              name="title"
+              class="form-control"
+              disabled="disabled"
+              value={values.title}
+            />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Content</label>
+            <textarea
+              name="content"
+              class="form-control"
+              rows="20"
+              value={values.content}
+              onChange={handleChange}
+            ></textarea>
+          </div>
+          <div class="d-grid gap-2 mt-5 d-flex justify-content-center">
+            <button type="submit" class="btn btn-outline-danger">
+              Save
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

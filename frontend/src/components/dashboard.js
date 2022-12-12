@@ -77,7 +77,7 @@ export default function Dashboard(props) {
           <div class="d-flex justify-content-between mt-5">
             <button
               type="button"
-              class="btn btn-outline-secondary"
+              class="btn btn-outline-danger"
               disabled={disablePrevious}
               onClick={() => {
                 window.location.href = "?p=" + (page - 1);
@@ -87,7 +87,7 @@ export default function Dashboard(props) {
             </button>
             <button
               type="button"
-              class="btn btn-outline-secondary"
+              class="btn btn-outline-danger"
               disabled={disableNext}
               onClick={() => {
                 window.location.href = "?p=" + (page + 1);

@@ -34,45 +34,49 @@ export default function Profile() {
   return (
     <div>
       <Header></Header>
-      <div class="container-md">
-        <div class="h1">About me</div>
-        <table class="table table-default">
-          <tbody>
-            <tr>
-              <th>User Name</th>
-              <td>{profile.user}</td>
-            </tr>
-            <tr>
-              <th>Email</th>
-              <td>{profile.email}</td>
-            </tr>
-            <tr>
-              <th>Program</th>
-              <td>{profile.program}</td>
-            </tr>
-            <tr>
-              <th>Location</th>
-              <td>{profile.location}</td>
-            </tr>
-            <tr>
-              <th>Offers</th>
-              <td>{profile.offers}</td>
-            </tr>
-            <tr>
-              <th>Skills</th>
-              <td>{profile.skills}</td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="d-flex justify-content-center">
-          <button
-            type="button"
-            class="btn btn-primary mx-5"
-            onClick={handleEdit}
-            style={{ backgroundColor: "#c4041d", borderColor: "#c4041d" }}
-          >
-            Edit
-          </button>
+      <div class="vh-100">
+        <div class="container-md">
+          <div class="h1">
+            About <span style={{ color: "#c4041d" }}>me</span>
+          </div>
+          <table class="table table-default">
+            <tbody>
+              <tr>
+                <th>User Name</th>
+                <td>{profile.user}</td>
+              </tr>
+              <tr>
+                <th>Email</th>
+                <td>{profile.email}</td>
+              </tr>
+              <tr>
+                <th>Program</th>
+                <td>{profile.program}</td>
+              </tr>
+              <tr>
+                <th>Location</th>
+                <td>{profile.location}</td>
+              </tr>
+              <tr>
+                <th>Offers</th>
+                <td>{profile.offers}</td>
+              </tr>
+              <tr>
+                <th>Skills</th>
+                <td>{profile.skills}</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="d-flex justify-content-center">
+            <button
+              type="button"
+              class="btn btn-primary mx-5"
+              onClick={handleEdit}
+              style={{ backgroundColor: "#c4041d", borderColor: "#c4041d" }}
+            >
+              Edit
+            </button>
+          </div>
         </div>
       </div>
     </div>

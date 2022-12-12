@@ -95,7 +95,7 @@ export default function Post() {
                 <button
                   id="edit"
                   type="button"
-                  class="btn btn-danger mx-5"
+                  class="btn btn-outline-danger mx-5"
                   onClick={handleEdit}
                 >
                   Edit
@@ -103,7 +103,7 @@ export default function Post() {
                 <button
                   id="delete"
                   type="button"
-                  class="btn btn-danger mx-5"
+                  class="btn btn-outline-danger mx-5"
                   onClick={handleDelete}
                 >
                   Delete

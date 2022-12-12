@@ -57,7 +57,7 @@ export default function Signup() {
                       Nice to meet you,{" "}
                       <span style={{ color: "#c4041d" }}>N</span>Uer!
                     </p>
-                    <form class="mx-1 mx-md-4">
+                    <form class="mx-1 mx-md-4" onSubmit={onSubmit}>
                       <div class="d-flex flex-row align-items-center mb-4">
                         <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                         <div class="form-outline flex-fill mb-0">
@@ -130,7 +130,7 @@ export default function Signup() {
                       </div>
                       <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                         <button
-                          type="button"
+                          type="submit"
                           class="btn btn-primary btn-lg"
                           style={{
                             backgroundColor: "#c4041d",
