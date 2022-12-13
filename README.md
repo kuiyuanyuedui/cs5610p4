@@ -1,10 +1,10 @@
-# CS5610 Web Dev, Project 3 - Aiming for the bonus points
+# CS5610 Web Dev, Project 4
 
-# Online community for NEU students
+# Online community for NEU students - Design and usability improvement based on project 3
 
-# https://cs5610p3-career.herokuapp.com/
+# https://nucommunity.herokuapp.com/
 
-#### [Online NEU community](https://cs5610p3-career.herokuapp.com/)
+#### [Online NEU community](https://nucommunity.herokuapp.com/)
 
 ### Author
 
@@ -16,47 +16,29 @@ Susie Xu, Yukun Zhou
 
 ### Project Objective
 
-Online communication has long been a lifestyle for young generation, especially during this pandemic era. <br/>
-However, after using a lot of online forums, we find that user backgrounds were often diverse, thus communication<br/>
-was ineffective and information less useful. This is mainly due to the large difference in background among users,<br/>
-for example, as an MSCS student, after I read an interview experience that was rated as ‘easy’ but found that the author <br/>
-is a developer with many years of work experience, the reference value of this post will then become very low immediately.<br/>
-Considering this, we plan to build a community site for NEU students and help users communicate with others from a similar <br/>
-background. From our perspective, this site will be particularly useful in career development since alumni can communicate smoothly here.!<br/>
+We built an online community for NEU students as project 3, however, after conducting the usability interview with several users,<br/>
+we find 2 major problems: 1. the design is not good enough according to the design principles we learned in class; 2. a major usability<br/>
+problem is that the newest post will be updated at the last page, instead of the first page, which makes it hard (or impossible when there<br/>
+are lots of posts) to read the newest posts. <br/>
+Considering this, we made 2 major improvements: 1. change the outlook of the website, add pictures, change the colors, and highlight NEU-related<br/>
+factors. This adjustment is tremendous and you definitely have to check it out! It has a Google style, but 100 times more beautiful than Google<br/>
+2. We also changed the order of posts being displayed, so that new posts will appear at the top page instead of the last page.<br/>
+With these 2 improvements, our website is now more user-friendly and good-looking.
 
 ### Tech Requirements
 
-HTML/CSS/JavaScript<br />
-Express.js<br />
-MongoDB<br />
-Node.js<br />
-React
+Design
+Usability test
 
-### How to install/use locally
+### How to use
 
-Use the website deployed here:<br />
-The Online Career Development Forum Deployed in Heroku https://cs5610p3-career.herokuapp.com/ <br />
-
-or<br />
-
-Clone this repo and run npm install<br />
-Run npm start at root directory<br />
-Open a new terminal session, run npm start at frontend directory
+Click the link and enter the deployed website.
 
 ### Presentation
 
-[Part1] https://www.youtube.com/watch?v=BVjRHK78Xao&ab_channel=ZYk
 
-[Part2] https://www.youtube.com/watch?v=n_TjUpL9cjI&ab_channel=SusieXu
-
-[Slides](https://docs.google.com/presentation/d/1xHSiI4RIAD5qmO-Z9f47vNc_YwWTZOMd/edit?usp=sharing&ouid=115810326221611098287&rtpof=true&sd=true)
+[Slides]()
 
 ### MIT License
 
 ### Release
-
-### Design doc
-
-[Online Career Development Forum Design Doc] https://github.com/ZYKDX/CS5610Project3/blob/main/Design%20Doc.pdf
-
-About 60% milestone, please see our project history prior to 11.15.2022. We have finished approximately 60% before that date.
