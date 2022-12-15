@@ -42,3 +42,10 @@ Click the link and enter the deployed website.
 ### MIT License
 
 ### Release
+
+### Code Review By Yuan Wang
+You guys have been doing a great job, it looks good to me overall, However I still have suggestions/advices that has been listed down below.
+- It would be better to assign the CSS file to its responding modules, it would be easier for other programmer for future expansion.
+- Could've used a color consistent color palette that is aligned with the app purpose.
+- Could've used an adequate typography that matching the whole idea of your web applications
+- Last, it would be organized to combine all the files of backend to one file
